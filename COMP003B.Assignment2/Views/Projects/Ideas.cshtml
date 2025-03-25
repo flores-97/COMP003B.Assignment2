@@ -2,10 +2,14 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
-    ViewData["Title"] = "Current";
+    ViewData["Title"] = "Ideas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>@ViewData["Title"]</h2>
-<p>Click <a href="https://github.com/flores-97/COMP003B.LectureActivity2"Here></a> to view the lecture activity.</p>
-@await Html.PartialAsync("_Sidebar")
+<ul>
+    <li>Idea number one</li>
+    <li>Idea number two</li>
+    <li>Idea number three</li>
+</ul>
+@await Html.PartialAsync("_Navigation")
