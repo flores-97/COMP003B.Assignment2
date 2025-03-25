@@ -1,3 +1,10 @@
+/*
+ * Victor Flores
+ * COMP-003B: ASP.NET Core
+ * Jonathon Cruz
+ * Displays and implements knowledge of Model-View-Controller (MVC)
+ */using COMP003B.Assignment2.Middleware;
+
 namespace COMP003B.Assignment2
 {
     public class Program
@@ -20,7 +27,12 @@ namespace COMP003B.Assignment2
             }
 
             app.UseHttpsRedirection();
+
             app.UseStaticFiles();
+
+            app.UseMiddleware<RequestTrackerMiddleware>();
+
+            app.UseWelcomePage("/welcome");
 
             app.UseRouting();
 
